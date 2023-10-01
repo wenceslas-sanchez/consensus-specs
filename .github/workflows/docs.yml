@@ -25,8 +25,8 @@ jobs:
       - name: Install pyspec requirements (in testing)
         run: |
           make preinstallation
-          python3 pip install ruamel.yaml==0.17.21 marko==1.0.2
-          python3 pip install -r scripts/requirements.txt
+          python3 -m pip install ruamel.yaml==0.17.21 marko==1.0.2
+          python3 -m pip install -r scripts/requirements.txt
       - name: Build test generation docs
         run: python3 scripts/gen_test_case_reference.py
       - run: mkdocs gh-deploy --force

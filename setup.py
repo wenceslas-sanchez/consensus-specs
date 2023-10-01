@@ -50,7 +50,6 @@ from ruamel.yaml import YAML
 
 MARKO_VERSION = "marko==1.0.2"
 try:
-    raise ValueError("test error raised here")
     import marko
 except ImportError:
     installPackage(MARKO_VERSION)

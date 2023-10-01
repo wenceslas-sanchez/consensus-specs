@@ -42,6 +42,7 @@ def installPackage(package: str):
 
 RUAMEL_YAML_VERSION = "ruamel.yaml==0.17.21"
 try:
+    raise ValueError("test error raised here")
     import ruamel.yaml
 except ImportError:
     installPackage(RUAMEL_YAML_VERSION)
